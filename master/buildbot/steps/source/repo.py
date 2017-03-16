@@ -339,7 +339,7 @@ class Repo(Source):
     def doRepoDownloads(self):
         self.repo_downloaded = ""
         for download in self.repoDownloads:
-            command = ['download'] + download.split(' ')
+            command = ['download', '-m'] + download.split(' ')
             self.stdio_log.addHeader("downloading changeset %s\n"
                                      % (download))
 
